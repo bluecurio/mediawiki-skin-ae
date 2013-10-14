@@ -1,0 +1,12 @@
+= Æ skin for Mediawiki =
+An attempt at a responsive skin for [http://www.mediawiki.org MediaWiki]. Uses [http://getbootstrap.com Bootstrap].
+
+== Installation ==
+You can install this skin as an extension to MediaWiki just like you would install any other extension: download and extract the code into the <code>extensions/</code> directory, and then add this line to <code>[https://www.mediawiki.org/wiki/LocalSettings.php LocalSettings.php]</code>.
+
+ // Insall the "ae" skin
+ require_once( "$IP/extensions/ae/ae.php" );
+
+== See also ==
+* https://en.wikipedia.org/wiki/Æ
+

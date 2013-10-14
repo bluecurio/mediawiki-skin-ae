@@ -47,7 +47,6 @@ class SkinAe extends SkinTemplate {
 	public function setupSkinUserCss( OutputPage $out )	{
 		parent::setupSkinUserCss( $out );
 		$out->addModuleStyles( 'skins.ae' );
-
 		$out->addModules( 'skins.ae.js' );
 	}
 
@@ -64,15 +63,8 @@ class AeTemplate extends BaseTemplate {
 		$this->html( 'headelement' ); ?>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
+	  <div class="container">
+		<?php  $this->getNavBarHeader() ?>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
@@ -102,7 +94,9 @@ class AeTemplate extends BaseTemplate {
           </form>
         </div><!--/.navbar-collapse -->
       </div>
-    </div>
+	</div>
+
+	<?php $this->getSiteNotice() ?>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -145,6 +139,25 @@ class AeTemplate extends BaseTemplate {
 	</html><?php
 		wfRestoreWarnings();
 	}
+
+	protected function getNavBarHeader() {
+?>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+		  </div>
+<?php
+	}
+
+	protected function getSiteNotice() {
+		if ( $this->data['sitenotice'] ) {
+			?><div class="container"><?php $this->html('sitenotice') ?></div><?php
+		}
+	}
+
+
 
 }
 

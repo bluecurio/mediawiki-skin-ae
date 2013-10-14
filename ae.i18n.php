@@ -26,7 +26,7 @@
 $messages = array();
 
 /**
- * English 
+ * English
  * @author Daniel Renfro
  */
 $messages['en'] = array(

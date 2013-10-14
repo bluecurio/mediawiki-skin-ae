@@ -64,7 +64,7 @@ $wgResourceModules[ 'skins.ae' ] = array(
 	'localBasePath' => __DIR__,
 );
 
-$wgResourceModules[ 'skins.ae.js' ] = array(
+$wgResourceModules[ 'skins.ae.js' ] (
 	'scripts' => array(
 		'ae/js/bootstrap.js',
 		'ae/js/modernizr-2.6.2-respond-1.1.0.min.js',
@@ -72,8 +72,8 @@ $wgResourceModules[ 'skins.ae.js' ] = array(
 	),
 	'position' => 'top',
 	'dependencies' => 'jquery.delayedBind',
-	'localBasePath' => $GLOBALS['wgStyleDirectory'],
-	'remoteBasePath' => $GLOBALS['wgStylePath'],
+	'localBasePath' => $GLOBALS['wgExtensionsDirectory'],
+	'remoteBasePath' => $GLOBALS['wgExtensionAssetsPath'],
 );
 
 // ------------- default user options ---------------------------------------------------
