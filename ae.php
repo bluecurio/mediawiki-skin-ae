@@ -56,15 +56,13 @@ $wgExtensionMessagesFiles['Ae'] = $dir . 'ae.i18n.php';
 
 $wgResourceModules[ 'skins.ae' ] = array(
 	'styles' => array(
-		'css/bootstrap.css' => array( 'media' => 'screen' ),
-		'css/bootstrap-theme.css' => array( 'media' => 'screen' ),
 		'css/ae.screen.css' => array( 'media' => 'screen' ),
 	),
 	'dependencies' => array(),
 	'localBasePath' => __DIR__,
 );
 
-$wgResourceModules[ 'skins.ae.js' ] (
+$wgResourceModules[ 'skins.ae.js' ] = array(
 	'scripts' => array(
 		'ae/js/bootstrap.js',
 		'ae/js/modernizr-2.6.2-respond-1.1.0.min.js',
@@ -72,8 +70,8 @@ $wgResourceModules[ 'skins.ae.js' ] (
 	),
 	'position' => 'top',
 	'dependencies' => 'jquery.delayedBind',
-	'localBasePath' => $GLOBALS['wgExtensionsDirectory'],
-	'remoteBasePath' => $GLOBALS['wgExtensionAssetsPath'],
+	'localBasePath' => &$GLOBALS['wgExtensionsDirectory'],
+	'remoteBasePath' => &$GLOBALS['wgExtensionAssetsPath'],
 );
 
 // ------------- default user options ---------------------------------------------------

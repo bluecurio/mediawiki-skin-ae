@@ -30,6 +30,6 @@ $messages = array();
  * @author Daniel Renfro
  */
 $messages['en'] = array(
-	'skinname-ae' => 'æ',
+	'skinname-ae' => 'Æ',
 	'aeskin-credits-description' => 'Responsive; æthetically pleasing;',
 );
